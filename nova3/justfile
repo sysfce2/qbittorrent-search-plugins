@@ -22,7 +22,7 @@ fetch_aux:
     if [ ! -d "_aux" ]; then
         mkdir _aux
         cd _aux
-        git clone --depth 1 https://github.com/qbittorrent/qBittorrent.git
+        git clone --depth 1  --revision 8e4d88bf59e3c3c5e21ba03502b37a6048de1659 https://github.com/qbittorrent/qBittorrent.git
         mv qBittorrent/src/searchengine/nova3/* ./
         rm -rf qBittorrent __init__.py
         # TODO: use `https://raw.githubusercontent.com/python/typeshed/refs/heads/main/stubs/PySocks/socks.pyi` after bumping python required version >= 3.10
